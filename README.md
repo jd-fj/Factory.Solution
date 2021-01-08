@@ -26,9 +26,31 @@ You've been contracted by the factory of the famous Dr. Sillystringz to build an
   * Install MySQL Workbench in the Applications folder.
   * Open MySQL Workbench and select the `Local instance 3306` server. You will need to enter the password **epicodus** (or the password you set).
 
-#### Setup and Use (cloning)
+#### Setup and Use via cloning
 
 * Open your terminal and ensure you are within the directory you'd like the file to be created in.
-* Enter the following command `$ git clone `
-* Once cloned, use the `$ cd LarryDavid.Solution/LarryDavid` command to navigate to the project directory.
+* Enter the following command `$ git clone https://github.com/taylulz/Factory.git`
+* Once cloned, use the `$ cd Factory/Factory` command to navigate to the project directory.
 * Enter `$ dotnet restore`
+
+#### Import database with Entity Framework Core
+* Now enter `$ dotnet ef database update` to create database in MySQL.
+* To run the console application, enter `$ dotnet run`
+* Your command line will open a server (likely `http://localhost:5000/`). Navigate to this URL in your browser to view the project.
+
+## Technologies Used
+
+_This application required use of the following programs/languages/libraries to create:_
+* _GitBash_
+* _Visual Studio Code_
+* _GitHub_
+* _C# v 7.3_
+* _.NET Core v 2.2_
+* _MSTest_
+* _ASP.NET Core MVC_
+* _Bootstrap_
+* _CSS_
+* _cshtml_
+* _MySQL Workbench_
+* _Entity Framework Core_
+* _[SQL Designer](https://ondras.zarovi.cz/sql/demo/)_
