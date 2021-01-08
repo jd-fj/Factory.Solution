@@ -9,6 +9,7 @@
 @using(Html.BeginForm())
 {
   @Html.HiddenFor(model => model.EngineerId)
+  @Html.HiddenFor(model => model.EngineerName)
 
   @Html.Label("Machine")
   @Html.DropDownList("MachineId")
