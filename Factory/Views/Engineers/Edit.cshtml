@@ -1,0 +1,18 @@
+@{
+  Layout = "_Layout";
+}
+
+@model Factory.Models.Engineer
+
+<h2>Update engineer</h2>
+
+@using(Html.BeginForm())
+{
+  @Html.HiddenFor(model => model.EngineerId)
+
+  @Html.Label("Engineer's Name:")
+  @Html.TextBoxFor(model => model.EngineerName)
+
+  <input type="submit" value="save" class="btn btn-primary">
+
+}
