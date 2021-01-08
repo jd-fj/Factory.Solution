@@ -20,6 +20,15 @@ namespace Factory.Controllers
     {
       return View(_db.Engineers.ToList());
     }
-  }
 
+    public ActionResult Create()
+    {
+      ViewBag.MachineId = new SelectList(_db.Machines, "MachineId", "MachineName");
+      return View();
+    }
+
+
+
+
+  }
 }
