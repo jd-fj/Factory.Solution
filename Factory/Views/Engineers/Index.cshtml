@@ -15,7 +15,7 @@ else
   <h2>All Engineers:</h2>
   @foreach (Engineer engineer in Model)
   {
-    <h3>Link to engineer's details</h3>
+    <h3>@Html.ActionLink($"{engineer.EngineerName}", "Details", new { id = engineer.EngineerId })</h3>
   }
-  <h2>@Html.ActionLink("+ your first engineer", "Create")</h2>
+  <h2>@Html.ActionLink("+ another engineer", "Create")</h2>
 }
