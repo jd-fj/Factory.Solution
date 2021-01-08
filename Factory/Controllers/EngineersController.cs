@@ -27,6 +27,18 @@ namespace Factory.Controllers
       return View();
     }
 
+    [HttpPost]
+    public ActionResult Create(Engineer engineer, int MachineId)
+    {
+      _db.Engineers.Add(engineer);
+      if(MachineId != 0)
+      {
+        _db.Licenses.Add(new Licenses() { MachineId = MachineId, EngineerId = engineer.EngineerId });
+      }
+      _db.SaveChanges();
+      return RedirectToAction("Index");
+    }
+
 
 
 
