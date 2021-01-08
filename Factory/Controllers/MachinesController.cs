@@ -19,5 +19,10 @@ namespace Factory.Controllers
     {
       return View(_db.Machines.ToList());
     }
+
+    public ActionResult Create()
+    {
+      return View();
+    }
   }
 }
