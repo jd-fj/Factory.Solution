@@ -6,11 +6,11 @@ namespace Factory.Models
   {
     public Machine()
     {
-      this.Engineers = new HashSet<Licences>();
+      this.Engineers = new HashSet<Licenses>();
     }
 
     public int MachineId { get; set; }
     public string MachineName { get; set; }
-    public ICollection<Licences> Engineers { get; set; }
+    public ICollection<Licenses> Engineers { get; set; }
   }
 }
