@@ -17,7 +17,7 @@ else
   <h3>Machines @Model.EngineerName is licensed for</h3>
   @foreach(var join in Model.Machines)
   {
-    <h3>@Html.ActionLink($"{join.Machine.MachineName}", "Details", "Machines", new { id = join.Machine.MachineName })</h3>
+    <h3>@Html.ActionLink($"{join.Machine.MachineName}", "Details", "Machines", new { id = join.Machine.MachineId })</h3>
   }
 
   <h4>@Html.ActionLink("+ another Machine", "AddMachine", new {id = Model.EngineerId}) | @Html.ActionLink("Update Engineer", "Edit", new { id = Model.EngineerId}) | @Html.ActionLink("Delete Engineer", "Delete", new { id = Model.EngineerId}) </h4> 
