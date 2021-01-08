@@ -1,0 +1,13 @@
+@{
+  Layout = "_Layout";
+}
+
+@model Factory.Models.Engineer
+
+<h2>Are you sure you want to delete @Model.EngineerName?</h2>
+
+@using(Html.BeginForm())
+{
+  <input value="Delete" type="submit">
+}
+
