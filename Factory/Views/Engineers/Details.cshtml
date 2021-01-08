@@ -10,7 +10,8 @@
 @if(Model.Machines.Count == 0)
 {
   <h4>Engineer currently is not licensed to work on any machines</h4>
-  <h4>@Html.ActionLink("+ Machine", "Create", "Machines")</h4>
+  <h4>@Html.ActionLink("+ New Machine", "Create", "Machines")</h4>
+  <h4>@Html.ActionLink("Authorize for machine", "AddMachine", "Engineers", new { id = Model.EngineerId })</h4>
   <h4>@Html.ActionLink("Delete Engineer", "Delete", new { id = Model.EngineerId})</h4>
 }
 else
