@@ -13,6 +13,9 @@
   @Html.Label("Engineer's Name:")
   @Html.TextBoxFor(model => model.EngineerName)
 
+  @Html.Label("Select machine engineer is licensed for")
+  @Html.DropDownList("MachineId")
+
   <input type="submit" value="save" class="btn btn-primary">
 
 }
