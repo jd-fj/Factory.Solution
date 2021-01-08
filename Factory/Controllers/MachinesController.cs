@@ -33,13 +33,27 @@ namespace Factory.Controllers
       return RedirectToAction("Index");
     }
 
-    // public ActionResult Details(int id )
-    // {
-    //   var thisMachine = _db.Machines
-    //     .Include(machine => machine.Engineers)
-    //     .ThenInclude(join = join.Engineers)
-    //     .FirstOrDefault(machine => machine.MachineId == id);
-    //   return View(thisMachine);
-    // }
+    public ActionResult Details(int id )
+    {
+      var thisMachine = _db.Machines
+        .Include(machine => machine.Engineers)
+        .ThenInclude(join => join.Engineer)
+        .FirstOrDefault(machine => machine.MachineId == id);
+      return View(thisMachine);
+    }
+
+    public ActionResult Edit(int id)
+    {
+      var thisMachine = _db.Machines.FirstOrDefault(machine => machine.MachineId == id);
+      return View(thisMachine);
+    }
+
+    [HttpPost]
+    public ActionResult Edit(Machine machine)
+    {
+      _db.Entry(machine).State = EntityState.Modified;
+      _db.SaveChanges();
+      return RedirectToAction("Index");
+    }
   }
 }
