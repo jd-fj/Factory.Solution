@@ -7,6 +7,6 @@ namespace Factory.Models
     public virtual DbSet<Machine> Machines { get; set; }
     public DbSet<Engineer> Engineers { get; set; }
     public DbSet<Licenses> Licenses { get; set; }
-    pubic FactoryContext(DbContextOptions options) : base(options) { }
+    public FactoryContext(DbContextOptions options) : base(options) { }
   }
 }
