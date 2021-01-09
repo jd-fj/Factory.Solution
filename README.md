@@ -1,16 +1,16 @@
-# Dr. Sillystringz's Factory
+# Dr. Sillystringz's Factory 🏭
 
 #### Friday project for week 4 of c#, Many-to-Many relationships, 1.8.2020
 
 #### Taylor Delph
 
-## Description
+## ➰ Description
 
-You've been contracted by the factory of the famous Dr. Sillystringz to build an application to keep track of their machine repairs. You are to build an MVC web application to manage their engineers, and the machines they are licensed to fix. The factory manager should be able to add a list of engineers, a list of machines, and specify which engineers are licensed to repair which machines. There should be a many-to-many relationship between Engineers and Machines. An engineer can be licensed to repair (belong to) many machines (such as the Dreamweaver, the Bubblewrappinator, and the Laughbox) and a machine can have many engineers licensed to repair it.
+  You've been contracted by the factory of the famous Dr. Sillystringz to build an application to keep track of their machine repairs. You are to build an MVC web application to manage their engineers, and the machines they are licensed to fix. The factory manager should be able to add a list of engineers, a list of machines, and specify which engineers are licensed to repair which machines. There should be a many-to-many relationship between Engineers and Machines. An engineer can be licensed to repair (belong to) many machines (such as the Dreamweaver, the Bubblewrappinator, and the Laughbox) and a machine can have many engineers licensed to repair it.
 
 ![Splash Page](./ReadMeAssets/home.gif)
 
-## Software Requirements
+## 💻  Software Requirements
 * A code editor like [VSCode](https://code.visualstudio.com/download)
 * With [.NET Core 2.2](https://dotnet.microsoft.com/download/dotnet-core/thank-you/sdk-2.2.106-macos-x64-installer) installed
 * [MySQL](https://dev.mysql.com/downloads/file/?id=484914)
@@ -30,7 +30,7 @@ You've been contracted by the factory of the famous Dr. Sillystringz to build an
   * Open MySQL Workbench and select the `Local instance 3306` server. You will need to enter the password **epicodus** (or the password you set).
 
 
-#### Setup and Use via cloning
+## 🏗️  Setup and Use via cloning
 * Open your terminal and ensure you are within the directory you'd like the file to be created in.
 * Enter the following command `$ git clone https://github.com/taylulz/Factory.git`
 * Once cloned, use the `$ cd Factory/Factory` command to navigate to the project directory.
@@ -94,7 +94,7 @@ CREATE TABLE `Machines` (
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 ```
 
-## Technologies Used
+## 🛠️ Technologies Used
 * _GitBash_
 * _Visual Studio Code_
 * _GitHub_
@@ -108,3 +108,15 @@ CREATE TABLE `Machines` (
 * _MySQL Workbench_
 * _Entity Framework Core_
 * _[SQL Designer](https://ondras.zarovi.cz/sql/demo/)_
+
+## 🐞 Known Bugs
+
+No known bugs at this time
+
+## 📫 Contact details
+
+If you run into any problems with the site, or need to get in touch with Dr. Sillystringz, please email me [Dr.Sillystringz](mailto:taylulzcode@gmail.com)
+
+## 📗 License
+
+MIT License
