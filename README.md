@@ -44,7 +44,7 @@ You've been contracted by the factory of the famous Dr. Sillystringz to build an
 ```
 {
   "ConnectionStrings": {
-      "DefaultConnection": "Server=localhost;Port=3306;database=taylor_delph_factory;uid=root;pwd=epicodus;"
+      "DefaultConnection": "Server=localhost;Port=3306;database=taylor_delph;uid=root;pwd=epicodus;"
   }
 }
 ```
@@ -57,8 +57,8 @@ You've been contracted by the factory of the famous Dr. Sillystringz to build an
 #### Import Database with SQL Schema
 * Copy and paste the following Schema Create Statement in MySQL Workbench to create this database with it's respective tables.
 ```
-CREATE DATABASE `taylor_delph_factory` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */;
-USE taylor_delph_factory;
+CREATE DATABASE `taylor_delph` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */;
+USE taylor_delph;
 
 DROP TABLE IF EXISTS `__EFMigrationsHistory`;
 CREATE TABLE `__EFMigrationsHistory` (
