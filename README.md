@@ -1,6 +1,6 @@
 # Dr. Sillystringz's Factory 🏭
 
-#### Friday project for week 4 of c#, Many-to-Many relationships, 1.8.2020
+#### Friday Project for Week 4 of C# || Many-to-Many relationships 1/8/2020
 
 #### Taylor Delph
 
