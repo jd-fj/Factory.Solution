@@ -6,13 +6,21 @@
 
 <h2>Add a machine that @Model.EngineerName is licensed to work on</h2>
 
-@using(Html.BeginForm())
+@if (Model.Machines.Count == 0)
 {
-  @Html.HiddenFor(model => model.EngineerId)
-  @Html.HiddenFor(model => model.EngineerName)
+  <h1>No machines yet.</h1>
+  <h4>@Html.ActionLink("+ your first machine", "Create")</h4>
+}
+else
+{
+  @using(Html.BeginForm())
+  {
+    @Html.HiddenFor(model => model.EngineerId)
+    @Html.HiddenFor(model => model.EngineerName)
 
-  @Html.Label("Machine")
-  @Html.DropDownList("MachineId")
+    @Html.Label("Machine")
+    @Html.DropDownList("MachineId")
 
-  <input type="submit" value="Save" class="btn btn-primary">
+    <input type="submit" value="Save" class="btn btn-primary">
+  }
 }
