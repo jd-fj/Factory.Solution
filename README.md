@@ -119,4 +119,4 @@ If you run into any problems with the site, or need to get in touch with Dr. Sil
 
 ## 📗 License
 
-MIT License
+MIT License.
