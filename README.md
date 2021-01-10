@@ -51,7 +51,7 @@
 
 #### Import Database with Entity Framework Core
 * Now enter `$ dotnet ef database update` to create database in MySQL.
-* To run the console application, enter `$ dotnet run`
+* To run the application, enter `$ dotnet run`
 * Your command line will open a server (likely `http://localhost:5000/`). Navigate to this URL in your browser to view the project.
 
 #### Import Database with SQL Schema
