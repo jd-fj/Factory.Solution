@@ -7,11 +7,12 @@
 
 
 
-<p> IF if no engineers and machines exist, show this gif </p>
+@if (Model.AllEngineers.Count == 0 && Model.AllMachines.Count == 0)
+{
   <img class="home-img" src='https://media.giphy.com/media/JKSaYOkCHcblK/giphy.gif' alt="Lucy from I Love Lucy eating chocolate from factory conveyor belt"/>
-
-<p>ELSE show these two cards</p>
-
+}
+else
+{
 <div class="row">
   <div class="col-6">
     <div class="card" style="width: 18rem;">
@@ -27,17 +28,18 @@
     </div>
   </div>
 
-  <div class="row">
-    <div class="col-6">
-      <div class="card" style="width: 18rem;">
-        <div class="card-header">
-          <h1>Machines</h1>
-        </div>
-        <ul class="list-group list-group-flush">
-        @foreach (var machine in Model.AllMachines)
-        {
-          <li class="list-group-item"><h3>@Html.ActionLink($"{machine.MachineName}", "Details", "Machines", new { id = machine.MachineId } )</h3></li>
-        }
-        </ul>
+  <div class="col-6">
+    <div class="card" style="width: 18rem;">
+      <div class="card-header">
+        <h1>Machines</h1>
       </div>
+      <ul class="list-group list-group-flush">
+      @foreach (var machine in Model.AllMachines)
+      {
+        <li class="list-group-item"><h3>@Html.ActionLink($"{machine.MachineName}", "Details", "Machines", new { id = machine.MachineId } )</h3></li>
+      }
+      </ul>
+    </div>
   </div>
+</div>
+}
