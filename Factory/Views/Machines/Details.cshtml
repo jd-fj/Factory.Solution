@@ -19,7 +19,12 @@ else
   <h3>Engineers licensed to work on @Model.MachineName</h3>
   @foreach(var join in Model.Engineers)
   {
-    <h4>@Html.ActionLink($"{join.Engineer.EngineerName}", "Details", "Engineers", new { id = join.Engineer.EngineerId })</h4>
+    <h3>@Html.ActionLink($"{join.Engineer.EngineerName}", "Details", "Engineers", new { id = join.Engineer.EngineerId })</h3>
+    @using (Html.BeginForm("DeleteEngineer", "Machines"))
+    {
+      @Html.Hidden("joinId", @join.LicensesId)
+      <input type="submit" value="Delete"/>
+    }
   }
-  <h4>@Html.ActionLink("+ another Engineer", "Create", "Engineers") | @Html.ActionLink("Update Machine", "Edit", new { id = Model.MachineId }) | @Html.ActionLink("Delete Machine", "Delete", new { id = Model.MachineId })</h4>
+  <h4>@Html.ActionLink("Authorize another engineer", "AddEngineer", "Machines", new { id = Model.MachineId }) | @Html.ActionLink("Update Machine", "Edit", new { id = Model.MachineId }) | @Html.ActionLink("Delete Machine", "Delete", new { id = Model.MachineId })</h4>
 }
