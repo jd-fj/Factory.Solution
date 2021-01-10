@@ -19,10 +19,10 @@
         <h1>Engineers</h1>
       </div>
       <ul class="list-group list-group-flush">
-      @foreach (var engineer in Model.AllEngineers)
-      {
-        <li class="list-group-item"><h3>@Html.ActionLink($"{engineer.EngineerName}", "Details", new { id = engineer.EngineerId })</h3></li>
-      }
+        @foreach (var engineer in Model.AllEngineers)
+        {
+          <li class="list-group-item"><h3>@Html.ActionLink($"{engineer.EngineerName}", "Details", "Engineers", new { id = engineer.EngineerId })</h3></li>
+        }
       </ul>
     </div>
   </div>
@@ -34,7 +34,10 @@
           <h1>Machines</h1>
         </div>
         <ul class="list-group list-group-flush">
-          <li class="list-group-item">List of machines here</li>
+        @foreach (var machine in Model.AllMachines)
+        {
+          <li class="list-group-item"><h3>@Html.ActionLink($"{machine.MachineName}", "Details", "Machines", new { id = machine.MachineId } )</h3></li>
+        }
         </ul>
       </div>
   </div>
