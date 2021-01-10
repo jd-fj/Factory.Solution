@@ -1,0 +1,18 @@
+
+@{
+  Layout = "_Layout";
+}
+@model Factory.Models.Machine
+
+<h2>Add an authorized engineer to work on @Model.MachineName </h2>
+
+@using(Html.BeginForm())
+{
+  @Html.HiddenFor(model => model.MachineId)
+  @Html.HiddenFor(model => model.MachineName)
+
+  @Html.Label("Engineer")
+  @Html.DropDownList("EngineerId")
+
+  <input type="submit" value="Save" class="btn btn-primary">
+}
