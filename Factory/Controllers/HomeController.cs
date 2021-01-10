@@ -18,11 +18,9 @@ namespace Factory.Controllers
 
     public ActionResult Index()
     {
-      var AllEngineers = _db.Engineers.ToList();
-      var AllMachines = _db.Machines.ToList();
       var viewModel = new MyViewModel();
-      viewModel.AllEngineers = AllEngineers;
-      viewModel.AllMachines = AllMachines;
+      viewModel.AllEngineers = _db.Engineers.ToList();
+      viewModel.AllMachines = _db.Machines.ToList();
       return View(viewModel);
     }
   }
