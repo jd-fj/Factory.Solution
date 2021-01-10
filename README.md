@@ -33,7 +33,7 @@
 ## 🏗️  Setup and Use via cloning
 * Open your terminal and ensure you are within the directory you'd like the file to be created in.
 * Enter the following command `$ git clone https://github.com/taylulz/Factory.git`
-* Once cloned, use the `$ cd Factory/Factory` command to navigate to the project directory.
+* Once cloned, use the `$ cd Factory.Solution/Factory` command to navigate to the root directory.
 * Enter `$ dotnet restore`
 
 
@@ -93,6 +93,7 @@ CREATE TABLE `Machines` (
   PRIMARY KEY (`MachineId`)
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 ```
+![Licenses Table joining EngineerId with MachineId](./ReadMeAssets/tables.png)
 
 ## 🛠️ Technologies Used
 * _GitBash_
@@ -115,7 +116,7 @@ No known bugs at this time
 
 ## 📫 Contact details
 
-If you run into any problems with the site, or need to get in touch with Dr. Sillystringz, please [email me here](mailto:taylulzcode@gmail.com)
+If you run into any problems with the site, or need to get in touch with Dr. Sillystringz, please [email her here](mailto:taylulzcode@gmail.com)
 
 ## 📗 License
 
