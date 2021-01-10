@@ -2,6 +2,11 @@
   Layout = "_Layout";
 }
 
+@using Factory.Models;
+@model Factory.Models.MyViewModel;
+
+
+
 <p> IF if no engineers and machines exist, show this gif </p>
   <img class="home-img" src='https://media.giphy.com/media/JKSaYOkCHcblK/giphy.gif' alt="Lucy from I Love Lucy eating chocolate from factory conveyor belt"/>
 
@@ -14,7 +19,10 @@
         <h1>Engineers</h1>
       </div>
       <ul class="list-group list-group-flush">
-        <li class="list-group-item">List of engineers here</li>
+      @foreach (var engineer in Model.AllEngineers)
+      {
+        <li class="list-group-item"><h3>@Html.ActionLink($"{engineer.EngineerName}", "Details", new { id = engineer.EngineerId })</h3></li>
+      }
       </ul>
     </div>
   </div>
